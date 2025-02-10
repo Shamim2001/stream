@@ -1,0 +1,48 @@
+Stream App
+    - User
+        - Name
+        - Email
+        - Phone
+        - Address
+
+    - Artist
+        - Name
+        - Email
+        - Phone
+        - Photo
+        - Status
+
+    - Production
+        - writers
+        - producers
+        - Music Directors
+        - status
+
+    - Label
+        - Name
+        - slug
+        - status
+        - vevo channel
+        - noc
+
+    - Release
+        - Title
+        - Slug
+        - Genre & Sub-genre
+        - Release Date
+        - Duration
+        - Language
+        - Description
+        - youtube link
+        - isrc code
+        - upc code
+        - cover art
+        - production_id
+        - artist_id
+        - label_id
+
+    - Media
+        - Name
+        - Type
+        - Release_id
+
