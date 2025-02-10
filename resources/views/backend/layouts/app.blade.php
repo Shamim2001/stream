@@ -57,6 +57,8 @@
 
     <script src="{{ asset('backend/assets/js/jquery.min.js') }}"></script>
 
+    @include('backend.partials.styles')
+
 
     {{-- <x-tinymce-config /> --}}
 
@@ -203,6 +205,8 @@
 
 
     <script src="{{ asset('backend/assets/js/custom.js') }}"></script>
+
+    @include('backend.partials.scripts')
 
     @stack('js')
 

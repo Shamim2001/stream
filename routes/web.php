@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\ArtistController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Frontend\FrontendController;
 
@@ -26,6 +27,12 @@ Route::view('/', 'welcome');
         Route::get('elements', [DashboardController::class, 'elements'])->name('dashboard.elements');
         // General
         Route::post('editor/image/upload', [DashboardController::class, 'imageUpload'])->name('editor.file.upload');
+
+
+
+        //ArtistController Routes
+        Route::resource('artists', ArtistController::class);
+        Route::get('artists/status/{id}', [ArtistController::class, 'changeStatus'])->name('artists.status');
 
 
     });

@@ -36,6 +36,12 @@
                  <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                  <x-nav-item title="Dashboard" icon="ti ti-brand-google-home" :url="route('dashboard.index')" :active="request()->routeIs('dashboard.index')" />
 
+                 <!-- Artist -->
+                    <x-nav-dropdown id="artist" title="Artist" :active="request()->routeIs('artist.*')" icon="ri-function-line">
+                        <x-nav-item title="View All" icon="" :url="route('artists.index')" :active="request()->routeIs('artists.index')" />
+                        {{-- <x-nav-item title="Add New" icon="" :url="route('artists.create')" :active="request()->routeIs('artists.create')" /> --}}
+                    </x-nav-dropdown>
+
                  <!-- Category -->
                  {{-- <x-nav-dropdown id="category" title="Category" :active="request()->routeIs('category.*')" icon="ri-function-line">
                      <x-nav-item title="View All" icon="" :url="route('category.index')" :active="request()->routeIs('category.index')" />
