@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\LabelController;
 use App\Http\Controllers\Backend\ArtistController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Http\Controllers\Backend\ProductionsController;
 
 Route::view('/', 'welcome');
 
@@ -33,6 +35,14 @@ Route::view('/', 'welcome');
         //ArtistController Routes
         Route::resource('artists', ArtistController::class);
         Route::get('artists/status/{id}', [ArtistController::class, 'changeStatus'])->name('artists.status');
+
+        //LabelController Routes
+        Route::resource('labels', LabelController::class);
+        Route::get('labels/status/{id}', [LabelController::class, 'changeStatus'])->name('labels.status');
+
+        //ProductionsController Routes
+        Route::resource('productions', ProductionsController::class);
+        Route::get('productions/status/{id}', [ProductionsController::class, 'changeStatus'])->name('productions.status');
 
 
     });

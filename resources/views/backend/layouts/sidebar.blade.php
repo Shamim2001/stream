@@ -42,6 +42,18 @@
                         {{-- <x-nav-item title="Add New" icon="" :url="route('artists.create')" :active="request()->routeIs('artists.create')" /> --}}
                     </x-nav-dropdown>
 
+                <!-- Label -->
+                    <x-nav-dropdown id="label" title="Label" :active="request()->routeIs('label.*')" icon="ri-function-line">
+                        <x-nav-item title="View All" icon="" :url="route('labels.index')" :active="request()->routeIs('labels.index')" />
+                        {{-- <x-nav-item title="Add New" icon="" :url="route('labels.create')" :active="request()->routeIs('labels.create')" /> --}}
+                    </x-nav-dropdown>
+
+                <!-- Production -->
+                    <x-nav-dropdown id="production" title="Production" :active="request()->routeIs('production.*')" icon="ri-function-line">
+                        <x-nav-item title="View All" icon="" :url="route('productions.index')" :active="request()->routeIs('productions.index')" />
+                        {{-- <x-nav-item title="Add New" icon="" :url="route('productions.create')" :active="request()->routeIs('productions.create')" /> --}}
+                    </x-nav-dropdown>
+
                  <!-- Category -->
                  {{-- <x-nav-dropdown id="category" title="Category" :active="request()->routeIs('category.*')" icon="ri-function-line">
                      <x-nav-item title="View All" icon="" :url="route('category.index')" :active="request()->routeIs('category.index')" />
